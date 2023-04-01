@@ -12,7 +12,6 @@ h1 {
 
 #startGame{
   display: flex;
-  margin: 10px auto;
   padding: 20px;
   font-weight: 700;
   font-size: 20px;
@@ -21,20 +20,34 @@ h1 {
 .emjiSize{
   font-size: 75px;
 }
+
+.nopointer{
+pointer-events: none;
+
+}
+
+.size-start{
+  display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+}
+
+.radio-set{
+  display: flex;
+  align-items: center;
+}
+
 .grid {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, calc(25% - 15px));
   grid-gap: 20px;
 }
 
 .card {
   height: 170px;
-  width: 140px;
+  width: 100%;
   border-radius: 10px;
   background-color: white;
   position: relative;
@@ -68,9 +81,12 @@ h1 {
 }
 
 .card .back {
+  display: flex;
+    justify-content: center;
+    align-items: center;
   background-color: blue;
-  background-position: center center;
-  background-size: cover;
+  /*background-position: center center;
+  background-size: cover;*/
   backface-visibility: hidden;
 }
 

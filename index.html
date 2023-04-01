@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Matching Game</title>
    
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -8,8 +10,53 @@
   <body>
     <p id="score">Score:0</p>
     <h1>Matching Game</h1>
+    <div class = 'size-start'>
+      <fieldset class = 'radio-set'>
+        <legend>Select a board size:</legend>
+        <div>
+          <input type="radio" id="small" name="size" value="small"
+                 >
+          <label for="small">12 cards</label>
+        </div> 
+        <div>
+          <input type="radio" id="medium" name="size" value="medium"
+          checked>
+          <label for="medium">16 cards</label>
+        </div>
+        <div>
+          <input type="radio" id="large" name="size" value="large"
+                 >
+          <label for="large">20 cards</label>
+        </div> 
+        <div>
+          <input type="radio" id="ex-large" name="size" value="ex-large"
+                 >
+          <label for="ex-large">24 cards</label>
+        </div> 
+
+      </fieldset>
+
+ <fieldset class = 'radio-set'>
+        <legend>Select a card type:</legend>
+        <div>
+          <lable>
+          <input type="radio" id="emoji" name="cardtype" value="emoji" checked>
+           <img src="./images/emoji.png" alt=""  width:100px/>
+          </label>
+        </div> 
+ <div>
+  <lable>
+          <input type="radio" id="deck" name="cardtype" value="deck">
+         <img src="./images/deckofcard.png" alt="" width:100px/>
+          </label>
+        </div> 
+         </fieldset>
+
     <button type="button" id = 'startGame'> Start Games</button>
+    </div>
+
     <div class="grid"></div>
-    <script src="script.js"></script>
+    
+    <script src="script.js" type="module"></script>
   </body>
 </html>
