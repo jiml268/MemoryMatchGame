@@ -126,12 +126,15 @@ deck[swapPlace] = holdcard
 
 
 function generateCards(cardtype) {
-  
+  const spaceRemain = window.innerHeight - buttonEl.offsetTop
+  console.log(spaceRemain)
+  const cardHeight = (spaceRemain / boardSize * 4) - 25
   let i = 0;
     while (i < boardSize) {
       const cardElement = document.createElement("div");
       cardElement.classList.add("card");
       cardElement.setAttribute("data-name", cards[i]);
+      cardElement.style.height = `${cardHeight}px`
       //cardElement.setAttribute("data-name", card.name);
       if (deckType === 'emoji'){
       cardElement.innerHTML = `

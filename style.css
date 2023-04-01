@@ -46,7 +46,6 @@ pointer-events: none;
 }
 
 .card {
-  height: 170px;
   width: 100%;
   border-radius: 10px;
   background-color: white;
@@ -92,4 +91,14 @@ pointer-events: none;
 
 .card .front {
   transform: rotateY(180deg);
+}
+
+@media  screen and (max-width: 600px) {
+  .size-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+  
 }
