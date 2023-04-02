@@ -100,7 +100,10 @@ if (cards.includes(playcard) === false){
 
 
 function newGames(){
-totalTurns = 0
+  totalTurns = 0
+  score = 0
+  totalTurns = 0
+matchfound = 0
 const currentDate = new Date()
 srartTime = currentDate.getTime()
   cardtype = "startgame"
