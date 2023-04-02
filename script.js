@@ -1,3 +1,4 @@
+
 const grid = document.querySelector('.grid'); // HTML element for the game grid
 let cards = []; // array to store the card objects
 let flippedCards = []; // array to store the currently flipped cards
@@ -22,6 +23,7 @@ let endTime
 let min
 let sec
 let deckType = 'emoji'
+
 
 const values = ['🍕', '🍔', '🍟', '🌭', '🥪', '🍩', '🍰', '🍫', '🍦', '🥧', '🍮', '🍭']; // Starting values for the icons of the game
 //grid.addEventListener('click', flipCards )
@@ -209,7 +211,11 @@ if (fstclick ===''){
           endTime = currentDate.getTime()
           const totalTime =(endTime-srartTime)/1000 
           min = Math.floor(totalTime/60)
-          sec = Math.round((totalTime) - (min*60))
+          sec = Math.round((totalTime) - (min * 60))
+//          toastr.info(`the game took you ${min} minutes and ${sec} seconds
+//          you made ${totalTurns} attemps
+//          your final score is ${score}`)
+          //notificationme(message)
           alert(`the game took you ${min} minutes and ${sec} seconds
           you made ${totalTurns} attemps
           your final score is ${score}`)
@@ -229,4 +235,4 @@ if (fstclick ===''){
     flippedCards=[]
     fstclick = '';
     sndclick = '';
-  }
+}
