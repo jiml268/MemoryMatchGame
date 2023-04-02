@@ -102,6 +102,7 @@ if (cards.includes(playcard) === false){
 function newGames(){
   totalTurns = 0
   score = 0
+  scoreEl.innerHTML = `Score:  ${score}`
   totalTurns = 0
 matchfound = 0
 const currentDate = new Date()
@@ -132,12 +133,16 @@ function generateCards(cardtype) {
   const spaceRemain = window.innerHeight - buttonEl.offsetTop
   console.log(spaceRemain)
   const cardHeight = (spaceRemain / boardSize * 4) - 25
+const cardwidth = "100%"
   let i = 0;
     while (i < boardSize) {
       const cardElement = document.createElement("div");
       cardElement.classList.add("card");
       cardElement.setAttribute("data-name", cards[i]);
       cardElement.style.height = `${cardHeight}px`
+      //cardElement.style.maxHeight = `150px`
+      cardElement.style.width = `${cardwidth}px`
+      //cardElement.style.maxWidth = `112px`
       //cardElement.setAttribute("data-name", card.name);
       if (deckType === 'emoji'){
       cardElement.innerHTML = `
