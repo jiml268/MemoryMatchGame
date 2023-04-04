@@ -1,4 +1,4 @@
-
+import Notiflix from 'notiflix';
 const grid = document.querySelector('.grid'); // HTML element for the game grid
 let cards = []; // array to store the card objects
 let flippedCards = []; // array to store the currently flipped cards
@@ -212,13 +212,12 @@ if (fstclick ===''){
           const totalTime =(endTime-srartTime)/1000 
           min = Math.floor(totalTime/60)
           sec = Math.round((totalTime) - (min * 60))
-//          toastr.info(`the game took you ${min} minutes and ${sec} seconds
-//          you made ${totalTurns} attemps
-//          your final score is ${score}`)
-          //notificationme(message)
-          alert(`the game took you ${min} minutes and ${sec} seconds
+          Notiflix.Notify.info(`the game took you ${min} minutes and ${sec} seconds
           you made ${totalTurns} attemps
-          your final score is ${score}`)
+          your final score is ${score}`);
+          //alert(`the game took you ${min} minutes and ${sec} seconds
+          //you made ${totalTurns} attemps
+          //your final score is ${score}`)
         }
     } else {
       
