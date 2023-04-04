@@ -1,31 +1,24 @@
 {
-  "name": "parcel-project-template",
-  "version": "2.0.0",
-  "description": "",
-  "homepage": "https://jiml268.github.io/MemoryMatchGame",
+  "name": "memorymatchgame",
+  "version": "1.0.0",
+  "description": "This is a single-player memory matching game where the player must match pairs of cards with the same value. The game starts with a grid of face-down cards, each with a hidden value. On each turn, the player flips over two cards to reveal their hidden values. If the values match, the cards remain face-up and the player earns a point. If the values do not match, the cards are flipped back over and the player loses a point. The game continues until all pairs have been matched.",
+  "main": "script.js",
+  "type": "module",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /MemoryMatchGame/"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/jiml268/MemoryMatchGame.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/jiml268/MemoryMatchGame/issues"
   },
+  "homepage": "https://github.com/jiml268/MemoryMatchGame#readme",
   "dependencies": {
-    "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.0",
-    "parcel": "^2.6.0",
-    "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
-  },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  }
 }
